@@ -67,5 +67,4 @@ else
     Wrot = whiteningFromCovariance(CC);
 end
 Wrot    = ops.scaleproc * Wrot; % scale this from unit variance to int 16 range. The default value of 200 should be fine in most (all?) situations.
-save Wrot.mat Wrot;
 fprintf('Channel-whitening matrix computed. \n');

@@ -55,6 +55,8 @@ fprintf('Time %3.0fs. Computing whitening matrix.. \n', toc);
 
 % this requires removing bad channels first
 Wrot = get_whitening_matrix(rez); % outputs a rotation matrix (Nchan by Nchan) which whitens the zero-timelag covariance of the data
+folder = fileparts(ops.fproc);
+save(fullfile(folder, 'Wrot.mat'), 'Wrot');
 % Wrot = gpuArray.eye(size(Wrot,1), 'single');
 % Wrot = diag(Wrot);
 
