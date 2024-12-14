@@ -92,7 +92,7 @@ end
 
 %%
 if getOr(ops, 'fig', 1)  
-    figure;
+    figure(193);
     set(gcf, 'Color', 'w')
     
     % plot the shift trace in um

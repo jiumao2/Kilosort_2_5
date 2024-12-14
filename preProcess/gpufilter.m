@@ -26,7 +26,7 @@ if getOr(ops, 'CAR', 1)
     disp('Performing CAR...');
     dataRAW = dataRAW - median(dataRAW, 2); % subtract median across channels
 else
-    disp('Skipping CAR!');
+%     disp('Skipping CAR!');
 end
 
 % next four lines should be equivalent to filtfilt (which cannot be used because it requires float64)
@@ -37,6 +37,6 @@ if getOr(ops, 'Filter', 1)
     datr = flipud(datr); % reverse time back
 else
     datr = dataRAW;
-    disp('Skipping Filter!');
+%     disp('Skipping Filter!');
 end
     
